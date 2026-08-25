@@ -38,4 +38,14 @@ public class ConditionalStatements {
     public static String normalizeUrl(String url) {
         return url.startsWith("https://") ? url : "https://" + url;
     }
+
+    public static String whoIsThisHouseToStarks(String family) {
+        if (family.equalsIgnoreCase("Karstark") || family.equalsIgnoreCase("Tally")) {
+            return "friend";
+        }
+        if (family.equalsIgnoreCase("Lannister") || family.equalsIgnoreCase("Frey")) {
+            return "enemy";
+        }
+        return "neutral";
+    }
 }
