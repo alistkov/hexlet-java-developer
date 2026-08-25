@@ -34,4 +34,8 @@ public class ConditionalStatements {
     public static String getSentenceTone(String sentence) {
         return sentence.equals(sentence.toUpperCase()) ? "scream" : "normal";
     }
+
+    public static String normalizeUrl(String url) {
+        return url.startsWith("https://") ? url : "https://" + url;
+    }
 }
