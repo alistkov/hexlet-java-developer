@@ -55,4 +55,14 @@ public class ConditionalStatements {
         }
         return Character.isUpperCase(text.charAt(0)) ? text : StringUtils.reverse(text);
     }
+
+    public static String getNumberExplanation(int number) {
+        return switch (number) {
+            case 666 -> "devil number";
+            case 42 -> "answer for everything";
+            case 7 -> "prime number";
+            default -> "just a number";
+        };
+    }
+
 }
