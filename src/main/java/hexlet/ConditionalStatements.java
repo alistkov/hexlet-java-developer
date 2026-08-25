@@ -30,4 +30,8 @@ public class ConditionalStatements {
     public static void isValid(int age, boolean hasConsent) {
         System.out.println(age >= 18 && hasConsent);
     }
+
+    public static String getSentenceTone(String sentence) {
+        return sentence.equals(sentence.toUpperCase()) ? "scream" : "normal";
+    }
 }
