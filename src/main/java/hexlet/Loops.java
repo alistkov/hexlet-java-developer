@@ -96,4 +96,16 @@ public class Loops {
         }
         return result;
     }
+
+    public static boolean hasChar(String str, char ch) {
+        var index = 0;
+
+        while (index < str.length()) {
+            if (str.charAt(index) == ch) {
+                return true;
+            }
+            index += 1;
+        }
+        return false;
+    }
 }

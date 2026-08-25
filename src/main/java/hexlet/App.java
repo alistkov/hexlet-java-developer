@@ -2,8 +2,9 @@ package hexlet;
 
 public class App {
     public static void main(String[] args) {
-        var text = "I never look back";
-        System.out.println(Loops.makeItFunny(text, 3)); // "I NevEr LooK bAck"
-        System.out.println(Loops.makeItFunny("hello", 2));
+        System.out.println(Loops.hasChar("Renly", 'R')); // true
+        System.out.println(Loops.hasChar("Renly", 'r')); // false
+        System.out.println(Loops.hasChar("Tommy", 'm')); // true
+        System.out.println(Loops.hasChar("Tommy", 'd')); // false
     }
 }
