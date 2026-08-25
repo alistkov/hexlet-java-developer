@@ -80,4 +80,20 @@ public class Loops {
         }
         return result;
     }
+
+    public static String makeItFunny(String str, int n) {
+        var index = 0;
+        var result = "";
+
+        while (index < str.length()) {
+            var letter = str.charAt(index);
+            if ((index + 1) % n == 0) {
+                result += Character.toUpperCase(letter);
+            } else {
+                result += letter;
+            }
+            index += 1;
+        }
+        return result;
+    }
 }
