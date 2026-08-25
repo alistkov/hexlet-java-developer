@@ -11,4 +11,9 @@ public class ConditionalStatements {
         var reversed = StringUtils.reverse(word);
         return word.equalsIgnoreCase(reversed);
     }
+
+    public static boolean isInternationalPhone(String phone) {
+        var firstSymbol = phone.charAt(0);
+        return firstSymbol == '+';
+    }
 }
