@@ -118,4 +118,30 @@ public class Loops {
         }
         return result;
     }
+
+    public static String compress(String string) {
+        if (string.isEmpty()) {
+            return "";
+        }
+        var result = new StringBuilder();
+        var count = 1;
+
+        for (var i = 1; i < string.length(); i += 1) {
+            if (string.charAt(i) == string.charAt(i - 1)) {
+                count += 1;
+            } else {
+                result.append(string.charAt(i - 1));
+                if (count > 1) {
+                    result.append(count);
+                }
+                count = 1;
+            }
+        }
+
+        result.append(string.charAt(string.length() - 1));
+        if (count > 1) {
+            result.append(count);
+        }
+        return result.toString();
+    }
 }
