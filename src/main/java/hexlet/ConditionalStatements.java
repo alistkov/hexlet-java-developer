@@ -16,4 +16,8 @@ public class ConditionalStatements {
         var firstSymbol = phone.charAt(0);
         return firstSymbol == '+';
     }
+
+    public static boolean isLeapYear(int year) {
+        return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
+    }
 }
