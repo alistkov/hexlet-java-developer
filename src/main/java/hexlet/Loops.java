@@ -40,4 +40,18 @@ public class Loops {
             startIndex -= 1;
         }
     }
+
+    public static int countChars(String str, char ch) {
+        int index = 0, count = 0;
+        var lowerCh = Character.toLowerCase(ch);
+
+        while (index < str.length()) {
+            if (Character.toLowerCase(str.charAt(index)) == lowerCh) {
+                count += 1;
+            }
+            index += 1;
+        }
+
+        return count;
+    }
 }
