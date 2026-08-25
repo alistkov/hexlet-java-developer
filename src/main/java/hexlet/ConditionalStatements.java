@@ -26,4 +26,8 @@ public class ConditionalStatements {
     public static boolean notToday(String date) {
         return !date.equalsIgnoreCase(LocalDate.now().toString());
     }
+
+    public static void isValid(int age, boolean hasConsent) {
+        System.out.println(age >= 18 && hasConsent);
+    }
 }
