@@ -20,4 +20,15 @@ public class Loops {
         }
         return result;
     }
+
+    public static String joinNumbersFromRange(int start, int finish) {
+        var result = "";
+        var index = start;
+        while (index <= finish)
+        {
+            result += index;
+            index += 1;
+        }
+        return result;
+    }
 }

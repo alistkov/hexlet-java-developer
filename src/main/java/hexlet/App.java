@@ -2,8 +2,8 @@ package hexlet;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println(Loops.multiplyNumbersFromRange(1, 5)); // 1 * 2 * 3 * 4 * 5 = 120
-        System.out.println(Loops.multiplyNumbersFromRange(2, 3)); // 2 * 3 = 6
-        System.out.println(Loops.multiplyNumbersFromRange(6, 6)); // 6
+        System.out.println(Loops.joinNumbersFromRange(1, 1)); // "1"
+        System.out.println(Loops.joinNumbersFromRange(2, 3)); // "23"
+        System.out.println(Loops.joinNumbersFromRange(5, 10)); // "5678910"
     }
 }
