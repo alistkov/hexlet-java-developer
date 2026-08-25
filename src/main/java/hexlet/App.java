@@ -2,8 +2,9 @@ package hexlet;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println(ConditionalStatements.isLeapYear(2018)); // false
-        System.out.println(ConditionalStatements.isLeapYear(2017)); // false
-        System.out.println(ConditionalStatements.isLeapYear(2016)); // true
+        // предположим сегодня 2012-11-25
+        System.out.println(ConditionalStatements.notToday("2026-08-25")); // false
+        System.out.println(ConditionalStatements.notToday("2013-11-25")); // true
+        System.out.println(ConditionalStatements.notToday("2013-09-01")); // true
     }
 }

@@ -2,6 +2,8 @@ package hexlet;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.time.LocalDate;
+
 public class ConditionalStatements {
     public static boolean isPensioner(int age) {
         return age >= 60;
@@ -19,5 +21,9 @@ public class ConditionalStatements {
 
     public static boolean isLeapYear(int year) {
         return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
+    }
+
+    public static boolean notToday(String date) {
+        return !date.equalsIgnoreCase(LocalDate.now().toString());
     }
 }
