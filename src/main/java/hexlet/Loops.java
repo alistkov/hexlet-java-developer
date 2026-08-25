@@ -31,4 +31,13 @@ public class Loops {
         }
         return result;
     }
+
+    public static void printReversedNameBySymbol(String name) {
+        var startIndex = name.length() - 1;
+
+        while (startIndex >= 0) {
+            System.out.println(name.charAt(startIndex));
+            startIndex -= 1;
+        }
+    }
 }
