@@ -108,4 +108,14 @@ public class Loops {
         }
         return false;
     }
+
+    public static String encrypt(String str) {
+        var strLength = str.length();
+        var result = "";
+        for (var i = 0; i < strLength; i += 2) {
+            var nextSymbol = i + 1 >= strLength ? "" : str.charAt(i + 1);
+            result = result + nextSymbol + str.charAt(i);
+        }
+        return result;
+    }
 }
