@@ -9,4 +9,15 @@ public class Loops {
         }
         System.out.println("finished!");
     }
+
+    public static int multiplyNumbersFromRange(int start, int finish) {
+        var result = 1;
+        var startValue = start;
+
+        while (startValue <= finish) {
+            result *= startValue;
+            startValue += 1;
+        }
+        return result;
+    }
 }
