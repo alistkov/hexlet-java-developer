@@ -48,4 +48,11 @@ public class ConditionalStatements {
         }
         return "neutral";
     }
+
+    public static String convertString(String text) {
+        if (text.isEmpty()) {
+            return "";
+        }
+        return Character.isUpperCase(text.charAt(0)) ? text : StringUtils.reverse(text);
+    }
 }
