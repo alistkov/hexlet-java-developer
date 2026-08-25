@@ -54,4 +54,15 @@ public class Loops {
 
         return count;
     }
+
+    public static String reverse(String str) {
+        var result = "";
+        var index = str.length() - 1;
+
+        while (index >= 0) {
+            result += str.charAt(index);
+            index -= 1;
+        }
+        return result;
+    }
 }
