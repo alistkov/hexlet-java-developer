@@ -65,4 +65,19 @@ public class Loops {
         }
         return result;
     }
+
+    public static String filterString(String str, char ch) {
+        var index = 0;
+        var result = "";
+        var lowerCh = Character.toLowerCase(ch);
+
+        while (index < str.length()) {
+            var letter = str.charAt(index);
+            if (lowerCh != Character.toLowerCase(letter)) {
+                result += letter;
+            }
+            index += 1;
+        }
+        return result;
+    }
 }
