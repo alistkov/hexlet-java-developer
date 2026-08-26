@@ -176,6 +176,32 @@ public class ArraysTrack {
         } while (swapped);
     }
 
+    public static int[] getIntersectionOfSortedArrays(int[] first, int[] second) {
+        var i = 0;
+        var j = 0;
+
+        int[] temp = new int[Math.min(first.length, second.length)];
+        int size = 0;
+
+        while (i < first.length && j < second.length) {
+            if (first[i] < second[j]) {
+                i++;
+            } else if (first[i] > second[j]) {
+                j++;
+            } else {
+                // Элемент есть в обоих массивах
+                if (size == 0 || temp[size - 1] != first[i]) {
+                    temp[size++] = first[i];
+                }
+
+                i++;
+                j++;
+            }
+        }
+
+        return Arrays.copyOf(temp, size);
+    }
+
     private static int[] uniq(int[] coll) {
         return Arrays.stream(coll).distinct().toArray();
     }
