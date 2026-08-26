@@ -1,5 +1,7 @@
 package hexlet;
 
+import java.util.Arrays;
+
 public class ArraysTrack {
     public static String[] getWeekends(String format) {
         return format.equalsIgnoreCase("short")
@@ -45,5 +47,23 @@ public class ArraysTrack {
             result *= number;
         }
         return result;
+    }
+
+    public static int[] getSameParity(int[] numbers) {
+        if (numbers.length == 0) {
+            return new int[0];
+        }
+
+        var result = new int[numbers.length];
+        var count = 0;
+        var isFirstElementEven = Math.abs(numbers[0]) % 2 == 0;
+
+        for (var number : numbers) {
+            if (isFirstElementEven == (Math.abs(number) % 2 == 0)) {
+                result[count] = number;
+                count += 1;
+            }
+        }
+        return Arrays.copyOfRange(result, 0 , count);
     }
 }
