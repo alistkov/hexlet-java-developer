@@ -38,4 +38,12 @@ public class ArraysTrack {
         }
         return sum;
     }
+
+    public static int mult(int[] numbers) {
+        var result = 1;
+        for (var number: numbers) {
+            result *= number;
+        }
+        return result;
+    }
 }
