@@ -2,17 +2,11 @@ package hexlet;
 
 public class App {
     public static void main(String[] args) {
-        int[][] scores = {
-                {3, 7}, // Первая игра
-                {4, 1}, // Вторая игра
-                {4, 4},
-                {3, 5},
-                {4, 5},
-                {3, 2},
-                {4, 3},
-                {6, 5},
+        String[][] definitions = {
+                {"Блямба", "Выпуклость, утолщения на поверхности чего-либо"},
+                {"Бобр", "Животное из отряда грызунов"},
         };
 
-        System.out.println(ArraysTrack.getSuperSeriesWinner(scores));
+        System.out.println(ArraysTrack.buildDefinitionList(definitions));
     }
 }

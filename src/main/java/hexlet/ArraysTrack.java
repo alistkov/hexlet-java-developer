@@ -95,4 +95,25 @@ public class ArraysTrack {
         }
         return "draw";
     }
+
+    public static String buildDefinitionList(String[][] definitions) {
+        if (definitions.length == 0) {
+            return "";
+        }
+
+        var html = new StringBuilder();
+        html.append("<dl>");
+        for (var definition : definitions) {
+            var name = definition[0];
+            var description = definition[1];
+            html.append("<dt>");
+            html.append(name);
+            html.append("</dt>");
+            html.append("<dd>");
+            html.append(description);
+            html.append("</dd>");
+        }
+        html.append("</dl>");
+        return html.toString();
+    }
 }
