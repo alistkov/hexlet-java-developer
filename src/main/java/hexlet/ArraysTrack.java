@@ -80,4 +80,19 @@ public class ArraysTrack {
         }
         return sum;
     }
+
+    public static String getSuperSeriesWinner(int[][] scores) {
+        var result = 0;
+
+        for (var score : scores) {
+            result = Integer.signum(score[0] - score[1]);
+        }
+        if (result > 0) {
+            return "canada";
+        }
+        if (result < 0) {
+            return "ussr";
+        }
+        return "draw";
+    }
 }
