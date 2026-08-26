@@ -158,6 +158,24 @@ public class ArraysTrack {
         return Arrays.copyOfRange(uniq, 0, count).length;
     }
 
+    public static void bubbleSort(int[] numbers) {
+        var steps = numbers.length - 1;
+        boolean swapped;
+
+        do {
+            swapped = false;
+            for (var i = 0; i < steps; i += 1) {
+                if (numbers[i] > numbers[i + 1]) {
+                    var tmp = numbers[i];
+                    numbers[i] = numbers[i + 1];
+                    numbers[i + 1] = tmp;
+                    swapped = true;
+                }
+            }
+            steps -= 1;
+        } while (swapped);
+    }
+
     private static int[] uniq(int[] coll) {
         return Arrays.stream(coll).distinct().toArray();
     }

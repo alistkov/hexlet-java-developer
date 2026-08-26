@@ -1,14 +1,15 @@
 package hexlet;
 
+import java.util.Arrays;
+
 public class App {
     public static void main(String[] args) {
-        var text1 = "yyab";
-        System.out.println(ArraysTrack.countUniqChars(text1)); // 3
+        int[] numbers1 = {};
+        ArraysTrack.bubbleSort(numbers1);
+        System.out.println(Arrays.toString(numbers1)); // => []
 
-        var text2 = "You know nothing Jon Snow";
-        System.out.println(ArraysTrack.countUniqChars(text2)); // 13
-
-        var text3 = "";
-        System.out.println(ArraysTrack.countUniqChars(text3)); // 0
+        int[] numbers2 = {3, 10, 4, 3};
+        ArraysTrack.bubbleSort(numbers2);
+        System.out.println(Arrays.toString(numbers2)); // => [3, 3, 4, 10]
     }
 }
