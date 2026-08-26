@@ -27,4 +27,15 @@ public class ArraysTrack {
         }
         return result;
     }
+
+    public static int calculateSum(int[] numbers) {
+        var sum = 0;
+
+        for (var i = 0; i < numbers.length; i += 1) {
+            if (numbers[i] % 3 == 0) {
+                sum += numbers[i];
+            }
+        }
+        return sum;
+    }
 }
