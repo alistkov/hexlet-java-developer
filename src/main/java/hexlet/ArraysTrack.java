@@ -144,6 +144,20 @@ public class ArraysTrack {
         return count;
     }
 
+    public static int countUniqChars(String text) {
+        var chars = text.toCharArray();
+        var count = 0;
+        var uniq = new Character[chars.length];
+
+        for (var ch : chars) {
+            if (!ArrayUtils.contains(uniq, ch)) {
+                uniq[count] = ch;
+                count += 1;
+            }
+        }
+        return Arrays.copyOfRange(uniq, 0, count).length;
+    }
+
     private static int[] uniq(int[] coll) {
         return Arrays.stream(coll).distinct().toArray();
     }
