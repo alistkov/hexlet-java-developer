@@ -1,5 +1,7 @@
 package hexlet;
 
+import org.apache.commons.lang3.ArrayUtils;
+
 import java.util.Arrays;
 
 public class ArraysTrack {
@@ -115,5 +117,15 @@ public class ArraysTrack {
         }
         html.append("</dl>");
         return html.toString();
+    }
+
+    public static String makeCensored(String text, String[] stopWords) {
+        var words = text.split(" ");
+        for (var i = 0; i < words.length; i += 1) {
+            var word = words[i];
+            var newWord = ArrayUtils.contains(stopWords, word) ? "$#%!" : word;
+            words[i] = newWord;
+        }
+        return String.join(" ", words);
     }
 }
