@@ -66,4 +66,18 @@ public class ArraysTrack {
         }
         return Arrays.copyOfRange(result, 0 , count);
     }
+
+    public static int getTotalAmount(String[] wallet, String currency) {
+        var sum = 0;
+
+        for (var amount: wallet) {
+            var currentCurrency = amount.substring(0, 3);
+            var currentAmount = amount.substring(4);
+            if (!currentCurrency.equals(currency)) {
+                continue;
+            }
+            sum += Integer.parseInt(currentAmount);
+        }
+        return sum;
+    }
 }

@@ -1,22 +1,14 @@
 package hexlet;
 
-import java.util.Arrays;
-
 public class App {
     public static void main(String[] args) {
-        int[] numbers1 = {};
-        System.out.println(Arrays.toString(ArraysTrack.getSameParity(numbers1))); // []
+        String[] banknotes1 = {"eur 10", "usd 1", "usd 10", "rub 50", "usd 5"};
+        System.out.println(ArraysTrack.getTotalAmount(banknotes1, "usd")); // 16
 
-        int[] numbers2 = {1, 2, 3};
-        System.out.println(Arrays.toString(ArraysTrack.getSameParity(numbers2))); // [1, 3]
+        String[] banknotes2 = {"eur 10", "usd 1", "eur 5", "rub 100", "eur 20", "eur 100", "rub 200"};
+        System.out.println(ArraysTrack.getTotalAmount(banknotes2, "eur")); // 135
 
-        int[] numbers3 = {1, 2, 8};
-        System.out.println(Arrays.toString(ArraysTrack.getSameParity(numbers3))); // [1]
-
-        int[] numbers4 = {2, 2, 8};
-        System.out.println(Arrays.toString(ArraysTrack.getSameParity(numbers4))); // [2, 2, 8]
-
-        int[] numbers5 = {-3, 2, 1};
-        System.out.println(Arrays.toString(ArraysTrack.getSameParity(numbers5))); // [-3, 1]
+        String[] banknotes3 = {"eur 10", "rub 50", "eur 5", "rub 10", "rub 10", "eur 100", "rub 200"};
+        System.out.println(ArraysTrack.getTotalAmount(banknotes3, "rub")); // 270
     }
 }
