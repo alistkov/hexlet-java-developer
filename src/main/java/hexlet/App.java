@@ -4,12 +4,12 @@ import java.util.Arrays;
 
 public class App {
     public static void main(String[] args) {
-        int[] numbers1 = {3};
-        ArraysTrack.swap(numbers1);
-        System.out.println(Arrays.toString(numbers1)); // => [3]
+        String[] names = {"John", "Smit", "Karl"};
+        var namesWithPrefix = ArraysTrack.addPrefix(names, "Mr.");
+        System.out.println(Arrays.toString(namesWithPrefix));
+        // => ["Mr. John", "Mr. Smit", "Mr. Karl"]
 
-        int[] numbers2 = {1, 2, 3, 4};
-        ArraysTrack.swap(numbers2);
-        System.out.println(Arrays.toString(numbers2)); // => [4, 2, 3, 1]
+        System.out.println(Arrays.toString(names)); // Исходный массив не меняется
+        // => ["John", "Smit", "Karl"]
     }
 }

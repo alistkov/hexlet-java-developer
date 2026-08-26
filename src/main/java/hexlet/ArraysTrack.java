@@ -18,4 +18,13 @@ public class ArraysTrack {
         numbers[0] = last;
         numbers[lastIndex] = first;
     }
+
+    public static String[] addPrefix(String[] names, String prefix) {
+        var result = new String[names.length];
+
+        for (var i = 0; i < names.length; i += 1) {
+            result[i] = prefix + " " + names[i];
+        }
+        return result;
+    }
 }
