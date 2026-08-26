@@ -128,4 +128,23 @@ public class ArraysTrack {
         }
         return String.join(" ", words);
     }
+
+    public static int getSameCount(int[] array1, int[] array2) {
+        var uniqArray1 = uniq(array1);
+        var uniqArray2 = uniq(array2);
+        var count = 0;
+
+        for (var i : uniqArray1) {
+            for (var j : uniqArray2) {
+                if (i == j) {
+                    count += 1;
+                }
+            }
+        }
+        return count;
+    }
+
+    private static int[] uniq(int[] coll) {
+        return Arrays.stream(coll).distinct().toArray();
+    }
 }
