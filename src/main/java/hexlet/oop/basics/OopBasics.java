@@ -1,4 +1,4 @@
-package hexlet;
+package hexlet.oop.basics;
 
 public class OopBasics {
     public static double getSquare(int sideA, int sideB, int angle) {
@@ -8,5 +8,9 @@ public class OopBasics {
 
     public static Point getNewPoint() {
         return new Point(5, 10);
+    }
+
+    public static double getCircumference(Circle circle) {
+        return circle.radius * 2 * Math.PI;
     }
 }

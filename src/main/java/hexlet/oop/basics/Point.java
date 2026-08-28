@@ -1,4 +1,4 @@
-package hexlet;
+package hexlet.oop.basics;
 
 public class Point {
     private int coordinateX;

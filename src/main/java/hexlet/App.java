@@ -1,7 +1,11 @@
 package hexlet;
 
+import hexlet.oop.basics.Circle;
+import hexlet.oop.basics.OopBasics;
+
 public class App {
     public static void main(String[] args) {
-        System.out.println(OopBasics.getSquare(10, 10, 60));
+        var circle = new Circle(1, 2,5);
+        System.out.println(OopBasics.getCircumference(circle)); // Приблизительно 31.4
     }
 }
