@@ -5,4 +5,8 @@ public class OopBasics {
         var radians = (angle * Math.PI) / 180;
         return  (sideA * sideB * Math.sin(radians)) / 2;
     }
+
+    public static Point getNewPoint() {
+        return new Point(5, 10);
+    }
 }
