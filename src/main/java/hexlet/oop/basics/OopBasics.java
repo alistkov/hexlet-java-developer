@@ -13,4 +13,11 @@ public class OopBasics {
     public static double getCircumference(Circle circle) {
         return circle.radius * 2 * Math.PI;
     }
+
+    public static String checkSecurity(Url url) {
+        var protocol = url.getProtocol();
+        var host = url.getHost();
+        var secureText = protocol.equals("https") ? "is secure" : "is not secure";
+        return "Connection to %s %s".formatted(host, secureText);
+    }
 }
