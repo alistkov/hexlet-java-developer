@@ -1,12 +1,15 @@
 package hexlet;
 
+import hexlet.oop.basics.Circle;
+import hexlet.oop.basics.Geometric;
 import hexlet.oop.basics.OopBasics;
+import hexlet.oop.basics.Quadrate;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println(OopBasics.calculateAverage(new Integer[] {1, 2, 3, 4})); // 2.5
-        System.out.println(OopBasics.calculateAverage(new Integer[] {})); // null
-        System.out.println(OopBasics.calculateAverage(new Integer[] {null})); // null
-        System.out.println(OopBasics.calculateAverage(new Integer[] {1, null, 3})); // null
+        Geometric quadrate = new Quadrate(5);
+        System.out.println(OopBasics.getFigureSquare(quadrate)); // "Square of quadrate is 25.0"
+        Geometric circle = new Circle(10);
+        System.out.println(OopBasics.getFigureSquare(circle)); // "Square of circle is 314.15..."
     }
 }

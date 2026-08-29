@@ -12,10 +12,6 @@ public class OopBasics {
         return new Point(5, 10);
     }
 
-    public static double getCircumference(Circle circle) {
-        return circle.radius * 2 * Math.PI;
-    }
-
     public static String checkSecurity(Url url) {
         var protocol = url.getProtocol();
         var host = url.getHost();
@@ -51,5 +47,11 @@ public class OopBasics {
         }
 
         return sum / length;
+    }
+
+    public static String getFigureSquare(Geometric figure) {
+        var figureName = figure.getName();
+        var square = figure.getSquare();
+        return "Square of " + figureName + " is " + square;
     }
 }

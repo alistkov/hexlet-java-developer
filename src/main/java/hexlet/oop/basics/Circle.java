@@ -1,13 +1,19 @@
 package hexlet.oop.basics;
 
-public class Circle {
-    public int x;
-    public int y;
-    public int radius;
+public class Circle implements Geometric {
 
-    public Circle(int x, int y, int radius) {
-        this.x = x;
-        this.y = y;
+    private int radius;
+
+    public Circle(int radius) {
         this.radius = radius;
+    }
+
+    public double getSquare() {
+        var square = Math.PI * radius * radius;
+        return square;
+    }
+
+    public String getName() {
+        return "circle";
     }
 }
