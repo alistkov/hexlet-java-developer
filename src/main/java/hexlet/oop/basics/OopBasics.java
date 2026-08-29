@@ -54,4 +54,12 @@ public class OopBasics {
         var square = figure.getSquare();
         return "Square of " + figureName + " is " + square;
     }
+
+    public static void printSquare(Rectangle figure) {
+        try {
+            System.out.println(figure.getSquare());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
 }
