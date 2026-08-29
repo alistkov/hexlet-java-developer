@@ -34,4 +34,22 @@ public class OopBasics {
        }
        return false;
     }
+
+    public static Double calculateAverage(Integer[] numbers) {
+        var length = numbers.length;
+
+        if (length == 0) {
+            return null;
+        }
+
+        var sum = 0.0;
+        for (var number : numbers) {
+            if (number == null) {
+                return null;
+            }
+            sum += number;
+        }
+
+        return sum / length;
+    }
 }
