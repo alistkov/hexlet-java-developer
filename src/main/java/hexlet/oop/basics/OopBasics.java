@@ -1,5 +1,7 @@
 package hexlet.oop.basics;
 
+import java.util.Arrays;
+
 public class OopBasics {
     public static double getSquare(int sideA, int sideB, int angle) {
         var radians = (angle * Math.PI) / 180;
@@ -19,5 +21,17 @@ public class OopBasics {
         var host = url.getHost();
         var secureText = protocol.equals("https") ? "is secure" : "is not secure";
         return "Connection to %s %s".formatted(host, secureText);
+    }
+
+    public static boolean hasDuplicates(String[] words) {
+        var copy = Arrays.copyOf(words, words.length);
+        Arrays.sort(copy);
+
+       for (var i = 0; i < copy.length - 1; i += 1) {
+           if (copy[i].equals(copy[i + 1])) {
+               return true;
+           }
+       }
+       return false;
     }
 }
