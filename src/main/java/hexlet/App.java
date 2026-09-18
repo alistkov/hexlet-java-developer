@@ -1,14 +1,14 @@
 package hexlet;
 
-import hexlet.lists.ArrayListMethods;
+import hexlet.lists.Exercises;
 import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        var capitals = List.of("london", "berlin", "tokio");
-        System.out.println(ArrayListMethods.getOrDefault(capitals, 1, "")); // "berlin"
-        System.out.println(ArrayListMethods.getOrDefault(capitals, 2, "")); // "tokio"
-        System.out.println(ArrayListMethods.getOrDefault(capitals, 5, "")); // ""
-        System.out.println(ArrayListMethods.getOrDefault(capitals, -2, "")); // ""
+        var items = List.of(1, -2, 3, -5);
+        var result = Exercises.replaceByZero(items);
+        System.out.println(result); // => [1, 0, 3, 0]
+        // Исходный список не изменился
+        System.out.println(items); // => [1, -2, 3, -5]
     }
 }
