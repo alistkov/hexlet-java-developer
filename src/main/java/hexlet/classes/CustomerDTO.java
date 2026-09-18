@@ -5,7 +5,6 @@ public class CustomerDTO {
     private final String lastName;
     private final String email;
 
-
     public CustomerDTO(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -17,7 +16,7 @@ public class CustomerDTO {
     }
 
     public String getLastName() {
-        return  lastName;
+        return lastName;
     }
 
     public String getEmail() {
