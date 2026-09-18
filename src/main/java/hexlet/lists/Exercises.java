@@ -16,11 +16,8 @@ public class Exercises {
         var result = new ArrayList<Integer>();
 
         for (var number : numbers) {
-            if (number < 0) {
-                result.add(0);
-            } else {
-                result.add(number);
-            }
+            var processedNumber = number > 0 ? number : 0;
+            result.add(processedNumber);
         }
 
         return result;
