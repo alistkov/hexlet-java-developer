@@ -1,8 +1,10 @@
 package hexlet.lists;
 
 import hexlet.lists.model.Book;
+import hexlet.lists.model.Car;
 import hexlet.lists.model.Product;
 import hexlet.lists.model.User;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -60,5 +62,20 @@ public class Exercises {
         var commonFriends = new ArrayList<>(firstUser.getFriends());
         commonFriends.retainAll(secondUser.getFriends());
         return commonFriends;
+    }
+
+    public static List<String> getCars(List<Car> cars, int manufacturedYear) {
+        var carsNames = new ArrayList<String>();
+
+        for (var car : cars) {
+            var manufacturedAt = car.getManufacturedAt();
+
+            if (manufacturedAt.getYear() < manufacturedYear) {
+                carsNames.add(car.toString());
+            }
+        }
+
+        carsNames.sort(String.CASE_INSENSITIVE_ORDER);
+        return carsNames;
     }
 }
