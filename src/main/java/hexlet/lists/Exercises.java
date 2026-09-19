@@ -1,5 +1,6 @@
 package hexlet.lists;
 
+import hexlet.lists.model.Product;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,5 +22,20 @@ public class Exercises {
         }
 
         return result;
+    }
+
+    public static List<String> getProductsByPrice(
+            List<Product> products, int minPrice, int maxPrice) {
+        var productTitles = new ArrayList<String>();
+
+        for (var product : products) {
+            var productPrice = product.getPrice();
+
+            if (productPrice >= minPrice && productPrice <= maxPrice) {
+                productTitles.add(product.getTitle());
+            }
+        }
+
+        return productTitles;
     }
 }
