@@ -1,6 +1,10 @@
 package hexlet.maps;
 
 import hexlet.maps.model.Data;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Exercise {
@@ -33,5 +37,22 @@ public class Exercise {
             }
         }
         return cityName;
+    }
+
+    public static Map<Character, List<String>> buildIndex(String text) {
+        var result = new HashMap<Character, List<String>>();
+
+        if (text.isEmpty()) {
+            return result;
+        }
+
+        var words = text.split(" ");
+        for (var word : words) {
+            var firstChar = Character.toLowerCase(word.charAt(0));
+            var resultWords = result.getOrDefault(firstChar, new ArrayList<String>());
+            resultWords.add(word);
+            result.put(firstChar, resultWords);
+        }
+        return result;
     }
 }

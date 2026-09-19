@@ -1,16 +1,15 @@
 package hexlet;
 
 import hexlet.maps.Exercise;
-import java.util.Map;
 
 public class App {
     public static void main(String[] args) {
-        var cities =
-                Map.of(
-                        "White River", 1,
-                        "Kashmor", 2,
-                        "Oxford", 3);
+        var text = "java and javascript are different languages";
 
-        System.out.println(Exercise.getMostPopulatedCity(cities)); // Kashmor
+        var index = Exercise.buildIndex(text);
+        System.out.println(index); // => {a=[and, are], d=[different], j=[java, javascript], l=[languages]}
+
+        var index2 = Exercise.buildIndex("");
+        System.out.println(index2); // => {}
     }
 }
