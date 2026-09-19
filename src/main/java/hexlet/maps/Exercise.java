@@ -1,7 +1,6 @@
 package hexlet.maps;
 
 import hexlet.maps.model.Data;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

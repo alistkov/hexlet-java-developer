@@ -7,7 +7,8 @@ public class App {
         var text = "java and javascript are different languages";
 
         var index = Exercise.buildIndex(text);
-        System.out.println(index); // => {a=[and, are], d=[different], j=[java, javascript], l=[languages]}
+        System.out.println(index);
+        // => {a=[and, are], d=[different], j=[java, javascript], l=[languages]}
 
         var index2 = Exercise.buildIndex("");
         System.out.println(index2); // => {}
