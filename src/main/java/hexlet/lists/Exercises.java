@@ -1,5 +1,6 @@
 package hexlet.lists;
 
+import hexlet.lists.model.Book;
 import hexlet.lists.model.Product;
 import java.util.ArrayList;
 import java.util.List;
@@ -37,5 +38,20 @@ public class Exercises {
         }
 
         return productTitles;
+    }
+
+    public static int countBooks(List<Book> books, String author, String genre) {
+        var booksCount = 0;
+
+        for (var book : books) {
+            var bookAuthor = book.getAuthorName();
+            var bookGenre = book.getGenre();
+
+            if (author.equals(bookAuthor) && genre.equals(bookGenre)) {
+                booksCount += 1;
+            }
+        }
+
+        return booksCount;
     }
 }
