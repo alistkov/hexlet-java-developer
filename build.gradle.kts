@@ -14,6 +14,7 @@ repositories {
 
 dependencies {
     implementation("org.apache.commons:commons-lang3:3.20.0")
+    implementation("org.apache.commons:commons-collections4:4.6.0")
 }
 
 application { mainClass.set("hexlet.App") }
