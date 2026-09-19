@@ -16,4 +16,22 @@ public class Exercise {
         var discount = discounts.getOrDefault(productName, 0.0);
         return price * (100 - discount) / 100;
     }
+
+    public static String getMostPopulatedCity(Map<String, Integer> cities) {
+        if (cities.isEmpty()) {
+            return null;
+        }
+
+        var maxPopulation = 0;
+        String cityName = null;
+
+        for (var city : cities.entrySet()) {
+            var cityPopulation = city.getValue();
+            if (cityPopulation > maxPopulation) {
+                cityName = city.getKey();
+                maxPopulation = cityPopulation;
+            }
+        }
+        return cityName;
+    }
 }
