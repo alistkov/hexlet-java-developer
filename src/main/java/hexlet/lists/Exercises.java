@@ -2,6 +2,7 @@ package hexlet.lists;
 
 import hexlet.lists.model.Book;
 import hexlet.lists.model.Product;
+import hexlet.lists.model.User;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,5 +54,11 @@ public class Exercises {
         }
 
         return booksCount;
+    }
+
+    public static List<User> getCommonFriends(User firstUser, User secondUser) {
+        var commonFriends = new ArrayList<>(firstUser.getFriends());
+        commonFriends.retainAll(secondUser.getFriends());
+        return commonFriends;
     }
 }
