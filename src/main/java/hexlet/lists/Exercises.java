@@ -4,8 +4,8 @@ import hexlet.lists.model.Book;
 import hexlet.lists.model.Car;
 import hexlet.lists.model.Product;
 import hexlet.lists.model.User;
-
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Exercises {
@@ -77,5 +77,24 @@ public class Exercises {
 
         carsNames.sort(String.CASE_INSENSITIVE_ORDER);
         return carsNames;
+    }
+
+    public static boolean isBracketsBalanced(String brackets) {
+        var stack = new LinkedList<Character>();
+
+        for (var i = 0; i < brackets.length(); i += 1) {
+            var currentBracket = brackets.charAt(i);
+
+            if (currentBracket == ')') {
+                var lastBracket = stack.pollLast();
+
+                if (lastBracket == null) {
+                    return false;
+                }
+            } else {
+                stack.add(currentBracket);
+            }
+        }
+        return stack.isEmpty();
     }
 }
