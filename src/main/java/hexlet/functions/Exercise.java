@@ -1,10 +1,9 @@
 package hexlet.functions;
 
+import hexlet.functions.model.Book;
 import hexlet.functions.model.User;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+
+import java.util.*;
 
 public class Exercise {
     public static double average(int number, int... numbers) {
@@ -59,5 +58,11 @@ public class Exercise {
 
     public static int calculate(int a, int b, BinaryOperation fn) {
         return fn.apply(a, b);
+    }
+
+    public static List<Book> sortBooks(List<Book> books) {
+        var copy = new ArrayList<>(books);
+        copy.sort(Comparator.comparing(Book::getTitle).reversed());
+        return copy;
     }
 }
