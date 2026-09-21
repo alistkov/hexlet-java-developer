@@ -1,22 +1,18 @@
 package hexlet;
 
-import hexlet.generics.SimpleTriple;
+import hexlet.generics.ListUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        var triple = new SimpleTriple<String, Integer, Boolean>("str", 1, true);
+        var languages = new ArrayList<>(List.of("java", "javascript", "php", "ruby"));
+        var result = ListUtils.filter(languages, l -> l.startsWith("j"));
+        System.out.println(result); // => ["java", "javascript"]
 
-        var reversed = triple.reverse();
-
-        reversed.getLeft(); // true
-        reversed.getMiddle(); // 1
-        reversed.getRight(); // str
-
-        var triple1 = new SimpleTriple<>(1, "s", true);
-        var triple2 = new SimpleTriple<>(1, "s", true);
-        var triple3 = new SimpleTriple<>(1, "str", true);
-
-        System.out.println(triple1.isEqualTo(triple2));
-        System.out.println(triple1.isEqualTo(triple3));
+        var numbers = new ArrayList<>(List.of(1, 2, 5, 0, 8, 3));
+        var result1 = ListUtils.filter(numbers, n -> n > 4);
+        System.out.println(result1); // => [5, 8]
     }
 }
