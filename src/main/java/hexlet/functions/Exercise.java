@@ -56,4 +56,8 @@ public class Exercise {
 
         return "zero";
     }
+
+    public static int calculate(int a, int b, BinaryOperation fn) {
+        return fn.apply(a, b);
+    }
 }
