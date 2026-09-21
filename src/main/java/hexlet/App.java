@@ -1,7 +1,6 @@
 package hexlet;
 
 import hexlet.functions.Exercise;
-
 import java.util.ArrayList;
 
 public class App {

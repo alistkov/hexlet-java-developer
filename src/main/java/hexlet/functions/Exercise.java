@@ -2,7 +2,6 @@ package hexlet.functions;
 
 import hexlet.functions.model.Book;
 import hexlet.functions.model.User;
-
 import java.util.*;
 import java.util.function.Function;
 
