@@ -4,6 +4,7 @@ import hexlet.functions.model.Book;
 import hexlet.functions.model.User;
 
 import java.util.*;
+import java.util.function.Function;
 
 public class Exercise {
     public static double average(int number, int... numbers) {
@@ -64,5 +65,15 @@ public class Exercise {
         var copy = new ArrayList<>(books);
         copy.sort(Comparator.comparing(Book::getTitle).reversed());
         return copy;
+    }
+
+    public static List<String> map(List<String> collection, Function<String, String> fn) {
+        var result = new ArrayList<String>();
+
+        for (var item : collection) {
+            var mappedValue = fn.apply(item);
+            result.add(mappedValue);
+        }
+        return result;
     }
 }
