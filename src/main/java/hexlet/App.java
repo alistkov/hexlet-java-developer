@@ -1,15 +1,22 @@
 package hexlet;
 
-import hexlet.generics.Exercise;
-import java.util.ArrayList;
-import java.util.List;
+import hexlet.generics.SimpleTriple;
 
 public class App {
     public static void main(String[] args) {
-        var numbers = new ArrayList<>(List.of(2, 3, 5));
+        var triple = new SimpleTriple<String, Integer, Boolean>("str", 1, true);
 
-        var result = Exercise.duplicate(numbers);
+        var reversed = triple.reverse();
 
-        System.out.println(result); // => [4, 6, 10]
+        reversed.getLeft(); // true
+        reversed.getMiddle(); // 1
+        reversed.getRight(); // str
+
+        var triple1 = new SimpleTriple<>(1, "s", true);
+        var triple2 = new SimpleTriple<>(1, "s", true);
+        var triple3 = new SimpleTriple<>(1, "str", true);
+
+        System.out.println(triple1.isEqualTo(triple2));
+        System.out.println(triple1.isEqualTo(triple3));
     }
 }
