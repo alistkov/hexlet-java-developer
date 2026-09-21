@@ -1,7 +1,9 @@
 package hexlet.functions;
 
 import hexlet.functions.model.User;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -31,5 +33,27 @@ public class Exercise {
         var usersCopy = new ArrayList<>(users);
         usersCopy.sort((u1, u2) -> u1.getBirthday().compareTo(u2.getBirthday()));
         return usersCopy.getFirst();
+    }
+
+    public static Map<String, Integer> countNumbers(List<Integer> numbers) {
+        var result = new HashMap<>(Map.of("negative", 0, "zero", 0, "positive", 0));
+        numbers.forEach(number -> {
+            var type = getNumberType(number);
+            result.compute(type, (key, count) -> count + 1);
+        });
+
+        return result;
+    }
+
+    public static String getNumberType(int number) {
+        if (number < 0) {
+            return "negative";
+        }
+
+        if (number > 0) {
+            return "positive";
+        }
+
+        return "zero";
     }
 }
