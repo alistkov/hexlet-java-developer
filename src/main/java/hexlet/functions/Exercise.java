@@ -1,7 +1,6 @@
 package hexlet.functions;
 
 import hexlet.functions.model.User;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -37,10 +36,11 @@ public class Exercise {
 
     public static Map<String, Integer> countNumbers(List<Integer> numbers) {
         var result = new HashMap<>(Map.of("negative", 0, "zero", 0, "positive", 0));
-        numbers.forEach(number -> {
-            var type = getNumberType(number);
-            result.compute(type, (key, count) -> count + 1);
-        });
+        numbers.forEach(
+                number -> {
+                    var type = getNumberType(number);
+                    result.compute(type, (key, count) -> count + 1);
+                });
 
         return result;
     }
