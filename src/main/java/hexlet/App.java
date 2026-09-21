@@ -1,18 +1,20 @@
 package hexlet;
 
 import hexlet.generics.ListUtils;
+import hexlet.generics.model.Woman;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        var languages = new ArrayList<>(List.of("java", "javascript", "php", "ruby"));
-        var result = ListUtils.filter(languages, l -> l.startsWith("j"));
-        System.out.println(result); // => ["java", "javascript"]
+        var people = new ArrayList<>(List.of(
+                new Woman("Anna"),
+                new Woman("Gina"),
+                new Woman("Nina")
+        ));
 
-        var numbers = new ArrayList<>(List.of(1, 2, 5, 0, 8, 3));
-        var result1 = ListUtils.filter(numbers, n -> n > 4);
-        System.out.println(result1); // => [5, 8]
+        System.out.println(ListUtils.findFirstIndex(people, "G")); // 1
+        System.out.println(ListUtils.findFirstIndex(people, "O")); // -1
     }
 }
