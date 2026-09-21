@@ -1,7 +1,6 @@
 package hexlet.generics;
 
 import hexlet.generics.model.Human;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
