@@ -1,23 +1,25 @@
 package hexlet;
 
 import hexlet.streams.Exercise;
-import hexlet.streams.model.Person;
+import hexlet.streams.model.Product;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-//        var people = new ArrayList(
-//                List.of(
-//                        new Person("John", 17),
-//                        new Person("Anna", 24),
-//                        new Person("Alex", 57),
-//                        new Person("Jun", 32)
-//                )
-//        );
-        var actual = Exercise.getAverageAge(new ArrayList<Person>());
-        System.out.println(actual);
+        var products = List.of(
+                new Product("Smartphone", "electronics", 500),
+                new Product("Laptop", "electronics", 1000),
+                new Product("Headphones", "electronics", 100),
+                new Product("Smart Watch", "electronics", 300),
+                new Product("T-Shirt", "cloth", 20),
+                new Product("Sneakers", "shoes", 100),
+                new Product("Coffee Machine", "kitchen", 200),
+                new Product("Sunglasses", "accessories", 50),
+                new Product("Book", "books", 15),
+                new Product("Gaming Console", "electronics", 400)
+        );
 
-//        System.out.println(Exercise.getAverageAge(people)); // 32.5
+        System.out.println(Exercise.getTotalPrice(products)); // 2300
     }
 }

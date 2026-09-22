@@ -1,6 +1,8 @@
 package hexlet.streams;
 
 import hexlet.streams.model.Person;
+import hexlet.streams.model.Product;
+
 import java.util.List;
 
 public class Exercise {
@@ -24,5 +26,12 @@ public class Exercise {
         var totalAges = users.stream()
                 .reduce(0.0, (acc, currentUser) -> acc + currentUser.getAge(), Double::sum);
         return totalAges / users.size();
+    }
+
+    public static int getTotalPrice(List<Product> products) {
+        return products.stream()
+                .filter(product -> product.getCategory().equals("electronics"))
+                .map(Product::getPrice)
+                .reduce(0, Integer::sum);
     }
 }
