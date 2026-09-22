@@ -1,5 +1,6 @@
 package hexlet.streams;
 
+import hexlet.streams.model.Film;
 import hexlet.streams.model.Person;
 import hexlet.streams.model.Product;
 
@@ -49,5 +50,12 @@ public class Exercise {
                 .map(email -> email.split("@")[1])
                 .filter(FREE_DOMAINS::contains)
                 .collect(Collectors.groupingBy(domain -> domain, Collectors.counting()));
+    }
+
+    public static Map<String, Long> getGenres(List<Film> films) {
+        return films.stream()
+                .flatMap(film -> film.getGenres().stream())
+                .map(String::toLowerCase)
+                .collect(Collectors.groupingBy(genre -> genre, Collectors.counting()));
     }
 }
