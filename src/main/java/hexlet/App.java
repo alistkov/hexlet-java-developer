@@ -1,12 +1,20 @@
 package hexlet;
 
 import hexlet.streams.Exercise;
+import hexlet.streams.model.Person;
+import java.util.ArrayList;
 import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        var emails = List.of("Mark@Gmail.com", "  AnnA@mail.io  ", "john@GMAIL.com");
-        var result = Exercise.normalize(emails);
-        System.out.println(result); // => [mark@gmail.com, anna@mail.io, john@gmail.com]
+        var people =
+                new ArrayList(
+                        List.of(
+                                new Person("John", 17),
+                                new Person("Anna", 24),
+                                new Person("Alex", 35)));
+
+        var names = Exercise.getAdultUserNames(people);
+        System.out.println(names); // => [Anna, Alex]
     }
 }
