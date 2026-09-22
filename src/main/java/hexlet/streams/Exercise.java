@@ -4,18 +4,13 @@ import hexlet.streams.model.Film;
 import hexlet.streams.model.Person;
 import hexlet.streams.model.Product;
 import hexlet.streams.model.User;
-
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Exercise {
-    private static final List<String> FREE_DOMAINS = List.of(
-            "gmail.com",
-            "yandex.ru",
-            "hotmail.com",
-            "yahoo.com"
-    );
+    private static final List<String> FREE_DOMAINS =
+            List.of("gmail.com", "yandex.ru", "hotmail.com", "yahoo.com");
 
     public static List<String> sortWords(List<String> words) {
         return words.stream().sorted().toList();
@@ -34,8 +29,9 @@ public class Exercise {
             return null;
         }
 
-        var totalAges = users.stream()
-                .reduce(0.0, (acc, currentUser) -> acc + currentUser.getAge(), Double::sum);
+        var totalAges =
+                users.stream()
+                        .reduce(0.0, (acc, currentUser) -> acc + currentUser.getAge(), Double::sum);
         return totalAges / users.size();
     }
 

@@ -1,7 +1,6 @@
 package hexlet;
 
 import hexlet.streams.Exercise;
-
 import java.util.List;
 
 public class App {
