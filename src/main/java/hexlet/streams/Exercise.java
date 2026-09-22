@@ -15,4 +15,14 @@ public class Exercise {
     public static List<String> getAdultUserNames(List<Person> users) {
         return users.stream().filter(user -> user.getAge() >= 18).map(Person::getName).toList();
     }
+
+    public static Double getAverageAge(List<Person> users) {
+        if (users.isEmpty()) {
+            return null;
+        }
+
+        var totalAges = users.stream()
+                .reduce(0.0, (acc, currentUser) -> acc + currentUser.getAge(), Double::sum);
+        return totalAges / users.size();
+    }
 }
