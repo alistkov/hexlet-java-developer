@@ -66,4 +66,12 @@ public class Exercise {
                 .findFirst()
                 .orElseThrow(() -> new RuntimeException("User not found"));
     }
+
+    public static Integer getSecondBiggest(List<Integer> numbers) {
+        return numbers.stream()
+                .sorted((a, b) -> Integer.compare(b, a))
+                .skip(1)
+                .findFirst()
+                .orElse(null);
+    }
 }
