@@ -3,6 +3,7 @@ package hexlet.streams;
 import hexlet.streams.model.Film;
 import hexlet.streams.model.Person;
 import hexlet.streams.model.Product;
+import hexlet.streams.model.User;
 
 import java.util.List;
 import java.util.Map;
@@ -57,5 +58,12 @@ public class Exercise {
                 .flatMap(film -> film.getGenres().stream())
                 .map(String::toLowerCase)
                 .collect(Collectors.groupingBy(genre -> genre, Collectors.counting()));
+    }
+
+    public static User findUserById(List<User> users, long id) {
+        return users.stream()
+                .filter(user -> user.getId() == id)
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("User not found"));
     }
 }

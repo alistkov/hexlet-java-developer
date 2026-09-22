@@ -1,19 +1,25 @@
 package hexlet;
 
 import hexlet.streams.Exercise;
-import hexlet.streams.model.Film;
+import hexlet.streams.model.User;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        var films = List.of(
-                new Film("Liquid Sky", List.of("thriller", "Action")),
-                new Film("Superman", List.of("Action", "fantasy", "thriller")),
-                new Film("Norwegian Ninja", List.of("THRILLER"))
+        var users = new ArrayList(
+                List.of(
+                        new User(1, "John"),
+                        new User(2, "Anna"),
+                        new User(3, "Alex")
+                )
         );
 
-        var result = Exercise.getGenres(films);
-        System.out.println(result); // => {"action"=2,"thriller"=3,"fantasy"=1}
+//        var user = Exercise.findUserById(users, 1);
+//        System.out.println(user.getName()); // John
+
+// Пользователя с таким id нет
+        System.out.println(Exercise.findUserById(users, 10)); // Error
     }
 }
