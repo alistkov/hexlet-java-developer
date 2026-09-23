@@ -5,6 +5,7 @@ plugins {
     application
     alias(libs.plugins.spotless)
     alias(libs.plugins.versions)
+    alias(libs.plugins.lombok)
 
 }
 
