@@ -1,14 +1,13 @@
 package hexlet.testing;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import static hexlet.testing.Fill.fill;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import static hexlet.testing.Fill.fill;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class FillTest {
     private final List<String> coll = new ArrayList<>();
@@ -23,7 +22,6 @@ public class FillTest {
         var actual1 = List.of("a", "*", "*", "d");
         fill(coll, "*", 1, 3);
         assertEquals(actual1, coll);
-
     }
 
     @Test
