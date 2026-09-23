@@ -1,15 +1,13 @@
 package hexlet.design;
 
+import java.util.ArrayList;
+import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Getter
 public class Customer {
-    @Setter
-    public String name;
+    @Setter public String name;
     private final List<CarRide> rides;
 
     public Customer(String name) {

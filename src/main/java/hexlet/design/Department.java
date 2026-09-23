@@ -1,18 +1,15 @@
 package hexlet.design;
 
+import java.util.ArrayList;
+import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Getter
 public class Department {
-    @Setter
-    private String title;
+    @Setter private String title;
 
-    @Getter
-    private final List<Employee> employees;
+    @Getter private final List<Employee> employees;
 
     public Department(String title) {
         this.title = title;
