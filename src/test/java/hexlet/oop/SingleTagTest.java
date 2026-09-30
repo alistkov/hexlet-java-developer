@@ -1,11 +1,10 @@
 package hexlet.oop;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 public class SingleTagTest {
     @Test

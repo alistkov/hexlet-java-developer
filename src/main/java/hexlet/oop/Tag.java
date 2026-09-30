@@ -15,8 +15,7 @@ public class Tag {
     protected String buildAttributes() {
         var entries = attributes.entrySet();
         return entries.stream()
-                .map((entry) ->
-                        String.format(" %s=\"%s\"", entry.getKey(), entry.getValue()))
+                .map((entry) -> String.format(" %s=\"%s\"", entry.getKey(), entry.getValue()))
                 .collect(Collectors.joining());
     }
 
