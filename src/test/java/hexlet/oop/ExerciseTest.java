@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import org.junit.jupiter.api.Test;
 
 public class ExerciseTest {
@@ -56,5 +57,23 @@ public class ExerciseTest {
         List<String> expected = new ArrayList<>();
         List<String> result = Exercise.buildApartmentsList(apartments, 10);
         assertEquals(expected, result);
+    }
+
+    @Test
+    void testSwapKV() {
+        KeyValueStorage storage = new InMemoryKV(Map.of("key", "value"));
+        storage.set("key2", "value2");
+        Exercise.swapKeyValue(storage);
+        assertEquals("default", storage.get("key3", "default"));
+        assertEquals("key", storage.get("value", ""));
+        assertEquals("key2", storage.get("value2", ""));
+    }
+
+    @Test
+    void testSwapKV2() {
+        KeyValueStorage storage = new InMemoryKV(Map.of("foo", "bar", "bar", "zoo"));
+        Exercise.swapKeyValue(storage);
+        Map<String, String> expected = Map.of("bar", "foo", "zoo", "bar");
+        assertEquals(expected, storage.toMap());
     }
 }

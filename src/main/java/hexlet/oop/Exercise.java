@@ -10,4 +10,13 @@ public class Exercise {
                 .map(Home::toString)
                 .toList();
     }
+
+    public static void swapKeyValue(KeyValueStorage storage) {
+        storage.toMap()
+                .forEach(
+                        (key, value) -> {
+                            storage.set(value, key);
+                            storage.unset(key);
+                        });
+    }
 }

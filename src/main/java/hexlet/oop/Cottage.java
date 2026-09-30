@@ -1,7 +1,5 @@
 package hexlet.oop;
 
-import java.util.Locale;
-
 public class Cottage implements Home {
     private final double area;
     private final int floorCount;
