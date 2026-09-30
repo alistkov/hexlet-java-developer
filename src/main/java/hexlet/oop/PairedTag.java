@@ -1,0 +1,24 @@
+package hexlet.oop;
+
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class PairedTag extends Tag {
+    private final String body;
+    private final List<Tag> children;
+
+    public PairedTag(String tagName, Map<String, String> attributes, String body, List<Tag> children) {
+        super(tagName, attributes);
+        this.body = body;
+        this.children = children;
+    }
+
+    @Override
+    public String toString() {
+        var tagChildren = children.stream()
+                .map(Object::toString)
+                .collect(Collectors.joining());
+        return "<" + getName() + buildAttributes() + ">" + body + tagChildren + "</" + getName() + ">";
+    }
+}
