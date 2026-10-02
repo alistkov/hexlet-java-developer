@@ -1,17 +1,13 @@
 package hexlet.oop;
 
 public class Address {
-    @NotNull
-    private String country;
+    @NotNull private String country;
 
-    @NotNull
-    private String city;
+    @NotNull private String city;
 
-    @NotNull
-    private String street;
+    @NotNull private String street;
 
-    @NotNull
-    private String houseNumber;
+    @NotNull private String houseNumber;
 
     private String flatNumber;
 
