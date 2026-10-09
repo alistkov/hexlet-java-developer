@@ -1,11 +1,10 @@
 package hexlet.interfaces;
 
-import org.junit.jupiter.api.Test;
-
-import java.time.Instant;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.time.Instant;
+import org.junit.jupiter.api.Test;
 
 public class ClockTest {
     private static final Instant EXPIRES_AT = Instant.parse("2026-09-23T12:00:00Z");
@@ -32,7 +31,6 @@ public class ClockTest {
         var after = Instant.now();
         assertTrue(
                 !actual.isBefore(before) && !actual.isAfter(after),
-                "SystemClock returns the current time"
-        );
+                "SystemClock returns the current time");
     }
 }

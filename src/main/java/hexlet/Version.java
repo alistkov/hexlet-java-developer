@@ -4,9 +4,7 @@ public record Version(int major, int minor, int patch) implements Comparable<Ver
     public static Version parse(String text) {
         var parts = text.split("\\.");
         return new Version(
-                Integer.parseInt(parts[0]),
-                Integer.parseInt(parts[1]),
-                Integer.parseInt(parts[2]));
+                Integer.parseInt(parts[0]), Integer.parseInt(parts[1]), Integer.parseInt(parts[2]));
     }
 
     @Override
