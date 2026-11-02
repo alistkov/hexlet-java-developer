@@ -14,7 +14,6 @@ public class InMemoryCache implements Cache, StatsProvider {
         missesCount = 0;
     }
 
-
     @Override
     public String get(String key) {
         var entry = cache.get(key);

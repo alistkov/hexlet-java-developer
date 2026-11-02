@@ -1,10 +1,9 @@
 package hexlet.interfaces;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import java.util.Map;
-
-import static org.junit.jupiter.api.Assertions.assertNull;
+import org.junit.jupiter.api.Test;
 
 public class NoopCacheTest {
 

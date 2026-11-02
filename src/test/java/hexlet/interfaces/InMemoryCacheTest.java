@@ -1,9 +1,9 @@
 package hexlet.interfaces;
 
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
+import org.junit.jupiter.api.Test;
 
 public class InMemoryCacheTest {
 
@@ -12,11 +12,11 @@ public class InMemoryCacheTest {
         var cache = new InMemoryCache();
         cache.put("user:007", "Bond");
 
-        assertEquals("Bond",  cache.get("user:007"));
+        assertEquals("Bond", cache.get("user:007"));
         assertNull(cache.get("user:008"));
 
         cache.put("user:007", "James Bond");
-        assertEquals("James Bond",  cache.get("user:007"));
+        assertEquals("James Bond", cache.get("user:007"));
     }
 
     @Test
