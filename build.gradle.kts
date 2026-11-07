@@ -63,3 +63,9 @@ spotless {
         endWithNewline()
     }
 }
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
