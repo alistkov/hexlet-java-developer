@@ -1,4 +1,4 @@
-package hexlet.interfaces;
+package hexlet.interfaces.multiple_implementation;
 
 public interface StatsProvider {
     int hits();

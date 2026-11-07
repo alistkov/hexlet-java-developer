@@ -1,4 +1,4 @@
-package hexlet.interfaces;
+package hexlet.interfaces.syntax;
 
 import java.time.Instant;
 

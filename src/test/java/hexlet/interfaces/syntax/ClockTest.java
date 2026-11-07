@@ -1,9 +1,10 @@
-package hexlet.interfaces;
+package hexlet.interfaces.syntax;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.time.Instant;
+
 import org.junit.jupiter.api.Test;
 
 public class ClockTest {

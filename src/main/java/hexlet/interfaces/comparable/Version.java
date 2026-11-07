@@ -1,4 +1,4 @@
-package hexlet;
+package hexlet.interfaces.comparable;
 
 public record Version(int major, int minor, int patch) implements Comparable<Version> {
     public static Version parse(String text) {

@@ -1,4 +1,4 @@
-package hexlet.interfaces;
+package hexlet.interfaces.multiple_implementation;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
