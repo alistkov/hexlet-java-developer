@@ -1,11 +1,10 @@
 package hexlet.interfaces.extending;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
 import java.util.Set;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 public class UserRepositoryTest {
     @Test
@@ -39,10 +38,7 @@ public class UserRepositoryTest {
         assertTrue(expectedUser.isPresent());
         assertEquals(john, expectedUser.get());
         assertTrue(repository.findById(3).isEmpty());
-        assertEquals(
-                Set.of(john, sam),
-                Set.copyOf(repository.findAll())
-        );
+        assertEquals(Set.of(john, sam), Set.copyOf(repository.findAll()));
     }
 
     @Test
@@ -67,10 +63,7 @@ public class UserRepositoryTest {
         repository.deleteById(42);
 
         assertTrue(repository.findById(1).isEmpty());
-        assertEquals(
-                List.of(new User(2, "Sam")),
-                repository.findAll()
-        );
+        assertEquals(List.of(new User(2, "Sam")), repository.findAll());
     }
 
     @Test
