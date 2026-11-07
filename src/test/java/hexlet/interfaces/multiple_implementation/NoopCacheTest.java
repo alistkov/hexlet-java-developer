@@ -3,7 +3,6 @@ package hexlet.interfaces.multiple_implementation;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
 import java.util.Map;
-
 import org.junit.jupiter.api.Test;
 
 public class NoopCacheTest {
